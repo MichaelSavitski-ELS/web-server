@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Error</title>
+    <link rel='icon' href='/img/weather.png' />
+    <link rel='stylesheet' href='./css/styles.css' />
+    <script src='.sint/js/app.js'></script>
+</head>
+
+<body>
+    <div class='main-content'>
+        {{>header}}
+        {{#if (isDefined message)}}
+        <p>{{message}}</p>
+        {{else}}
+        <p>Page not found.</p>
+        {{/if}}
+    </div>
+
+    {{>footer}}
+</body>
+
+</html>
