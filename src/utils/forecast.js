@@ -9,8 +9,7 @@ const forecast = (latitude, longitude, callback) => {
         }
         else {
             const currentData = body.current;
-            console.log(currentData);
-            const location = `${body.location.address}. ${body.location.region}, ${body.location.country}`;
+            const location = `${body.location.name}. ${body.location.region}, ${body.location.country}`;
             const temperature = currentData.temperature;
             const feelsLike = currentData.feelslike;
             const description = currentData.weather_descriptions[0];

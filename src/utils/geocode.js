@@ -9,7 +9,7 @@ const geocode = (address, callback) => {
 
     request({ url: geocodingUrl, json: true, rejectUnauthorized: false }, (error, { body, features }) => {
         if (body) {
-            if (!body.features[0]) {
+            if (!body.features) {
                 return callback('Unable to find location.');
             }
 
